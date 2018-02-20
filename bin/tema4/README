@@ -1,0 +1,21 @@
+
+	Mocanu Alexandru George
+	325 CB
+
+				Tema 4
+
+ Rezolvarea temei a fost realizata in Java fiind folosite 3 clasa auxiliare si o clasa principala, MainClass.
+	
+ Astfel, fiecare clasa are urmatoarea functionalitate:
+
+- Edges   : descrie structura unei muchii, prin memorarea celor 2 noduri componente.
+- Indo    : descrie continutul fisierului de intrare ,iar prin initializarea unei instante a acesti clase, se realizeaza in acelasi timp si citirea din fisierul "test.in"
+- Formula : in cadrul acestei clase regasim metoda statica de alcatuire a formulei, prin aplicarea transformarii.
+
+Astfel transformarea propusa este alcatuita din urmatoarele parti(consideram numarul de culori ca fiind n,numarul de muchii - m,iar numarul de culori - c):
+
+- prima parte unde se atribuie o variabila fiecarui culori pe care o poate lua un nod i rezultand cel mult timpul O(n*c).
+
+- a doua parte presupune verificarea ca fiecarui nod sa ii fie asociat o singura culoare, astfel se vor obtine expresii : (~x0Vx1), unde variabilele x0 si x1 reprezinta doua culori ale unui nod i, astfel aceasta atribuire va costa cel mult O(n*c*c).
+
+- ultima parte presupune verificarea ca oricare doua noduri a unei muchii nu au aceeasi culoarea,deci vom obtine clauze : (~x0V~x3) unde x0 si x3 codifica aceeasi culoare luata de un nod ,doar ca apartine nodurilor diferite. Astfel costul pentru aceasta operatie va fi de O(m*c).
